@@ -1,0 +1,8 @@
+todo
+  - get some known faces
+  - write module for clipping faces out of generated video frames
+  - write module for comparing clipped faces to known faces
+
+done
+  - start pipeline runner
+  - write module for automating video frame generation
