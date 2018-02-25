@@ -82,7 +82,7 @@ class FrameGenerator:
 
 
   def get_unprocessed_videos(self):
-    filenames_in_source_folder = os.listdir(self.video_source_folder)
+    filenames_in_source_folder = [f for f in os.listdir(self.video_source_folder) if not ".md" in f]
     folders_in_output_folder = os.listdir(self.frame_output_folder)
 
     return [f for f in filenames_in_source_folder if f not in folders_in_output_folder]
@@ -92,11 +92,6 @@ class FrameGenerator:
     unprocessed_videos = self.get_unprocessed_videos()
     for video_filename in unprocessed_videos:
       self.__process_video(video_filename)
-
-
-
-
-
 
 
 
