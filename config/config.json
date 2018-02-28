@@ -1,13 +1,19 @@
 {
   "work_folder": "./work",
   "state_folder": "./state",
+  "output_folder": "./output",
   "frame_generator": {
     "ffmpeg": {
       "fps": 0.0005,
       "qscale": 2,
       "threads": 4
     },
-    "video_source_folder": "./source_videos",
-    "frame_output_folder": "./video_frames"
+    "video_source_folder": "./source_videos"
+  },
+  "face_isolator": {
+    "autocrop": {
+      "fwidth": 1000,
+      "fheight": 1000
+    }
   }
 }

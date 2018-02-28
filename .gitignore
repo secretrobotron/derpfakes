@@ -4,3 +4,4 @@ work/
 state/
 source_videos/
 pipeline/__pycache__/
+output/
