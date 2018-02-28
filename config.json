@@ -1,0 +1,28 @@
+{
+  "output_folder": "./output",
+  "segment_work_folder": "./work/stages",
+  "segment_output_folder": "./work/output",
+  "frame_generator": {
+    "ffmpeg": {
+      "fps": 0.1,
+      "qscale": 2,
+      "threads": 4
+    },
+    "video_source_folder": "./input/source_videos"
+  },
+  "face_isolator": {
+    "autocrop": {
+      "fwidth": 1000,
+      "fheight": 1000
+    }
+  },
+  "face_recognizer": {
+    "face_recognition": {
+      "cpus": 2
+    },
+    "known_faces_folder": "./input/known_faces"
+  },
+  "reconciler": {
+
+  }
+}

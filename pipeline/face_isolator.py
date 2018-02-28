@@ -5,10 +5,12 @@ import subprocess
 
 from pipeline.segment import PipelineSegment
 
+FILES_TO_IGNORE = ['.DS_Store']
+
 class FaceIsolator(PipelineSegment):
 
-  def __init__(self, config, input_folder, work_folder, output_folder, state_folder, testing):
-    PipelineSegment.__init__(self, "face_isolator", config, work_folder, output_folder, state_folder, testing)
+  def __init__(self, config, input_folder, work_folder, output_folder, testing, verbose):
+    PipelineSegment.__init__(self, "face_isolator", config, work_folder, output_folder, testing, verbose)
     self.input_folder = input_folder
 
 
@@ -49,11 +51,13 @@ class FaceIsolator(PipelineSegment):
             filename = match.group(1)
             os.remove(os.path.join(working_dir, filename))
 
+        ## TODO: Make this a move instead of a copy
         shutil.copytree(working_dir, output_dir)
 
 
   def run(self):
     for root_dir, dirs, files in os.walk(self.input_folder):
+      files = [f for f in files if not f in FILES_TO_IGNORE]
       if len(files) > 0:
         dirname = os.path.basename(root_dir)
         working_dir = os.path.join(self.work_folder, dirname)

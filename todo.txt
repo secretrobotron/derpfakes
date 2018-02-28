@@ -1,8 +1,11 @@
 todo
-  - get some known faces
-  - write module for clipping faces out of generated video frames
-  - write module for comparing clipped faces to known faces
+  - fix misc. todos
 
 done
   - start pipeline runner
   - write module for automating video frame generation
+  - write module for clipping faces out of generated video frames
+  - get some known faces
+  - write module for comparing clipped faces to known faces
+  - write reconciliation module for combining results
+  - remove "state" stuff

@@ -1,7 +1,5 @@
 .DS_Store
-video_frames/
 work/
-state/
-source_videos/
+input/source_videos/
 pipeline/__pycache__/
 output/

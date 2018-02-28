@@ -7,8 +7,8 @@ from pipeline.segment import PipelineSegment
 
 class FrameGenerator(PipelineSegment):
 
-  def __init__(self, config, work_folder, output_folder, state_folder, testing):
-    PipelineSegment.__init__(self, "frame_generator", config, work_folder, output_folder, state_folder, testing)
+  def __init__(self, config, work_folder, output_folder, testing, verbose):
+    PipelineSegment.__init__(self, "frame_generator", config, work_folder, output_folder, testing, verbose)
 
     self.video_source_folder = os.path.abspath(config["video_source_folder"])
 
