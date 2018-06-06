@@ -12,7 +12,7 @@ import shutil
 
 parser = argparse.ArgumentParser(description="Important People Impersonation Pipeline")
 # parser.add_argument("integers", metavar="N", type=int, nargs="+", help="an integer for the accumulator")
-parser.add_argument("--test", action="store_true", help="Don\"t actually run any processor-intensive jobs (e.g. ffmpeg)")
+parser.add_argument("--test", action="store_true", help="Don\'t actually run any processor-intensive jobs (e.g. ffmpeg)")
 parser.add_argument("--clearall", action="store_true", help="Clear work and output folders before doing any work")
 parser.add_argument("--clear", help="Clear the working folder of the specified pipeline segment")
 parser.add_argument("--verbose", action="store_true", help="Show lots of logs")
